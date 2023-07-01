@@ -1,15 +1,15 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <RegionSelector currency="GBP" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import RegionSelector from './components/RegionSelector.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    RegionSelector
   }
 }
 </script>
