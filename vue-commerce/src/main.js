@@ -1,11 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faFlagUsa } from '@fortawesome/free-solid-svg-icons';
+import BalmUI from 'balm-ui'; // Official Google Material Components
+import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
+import 'balm-ui-css';
 
-const app = createApp(App);
-app
-.component('font-awesome-icon', FontAwesomeIcon)
-.mount('#app');
+const app = createApp(App)
+
+app.use(BalmUI);
+app.use(BalmUIPlus);
+app.mount('#app');

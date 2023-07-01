@@ -1,15 +1,16 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <RegionSelector currency="GBP" />
+  <!-- Can pass GBP, EUR, USD, CHF -->
+  <CurrencySelector currency="GBP" />
 </template>
 
 <script>
-import RegionSelector from './components/RegionSelector.vue'
+import CurrencySelector from './components/CurrencySelector.vue'
 
 export default {
   name: 'App',
   components: {
-    RegionSelector
+    CurrencySelector
   }
 }
 </script>
