@@ -1,27 +1,27 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <!-- Can pass GBP, EUR, USD, CHF -->
-  <CurrencySelector currency="GBP" />
-</template>
-
 <script>
-import CurrencySelector from './components/CurrencySelector.vue'
+import HeaderBar from './components/HeaderBar.vue';
 
 export default {
   name: 'App',
   components: {
-    CurrencySelector
-  }
+    HeaderBar
+  },
+  data() {
+  },
 }
+
 </script>
+
+<template>
+  <HeaderBar />
+</template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

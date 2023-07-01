@@ -1,12 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-import BalmUI from 'balm-ui'; // Official Google Material Components
-import BalmUIPlus from 'balm-ui-plus'; // BalmJS Team Material Components
-import 'balm-ui-css';
+import PrimeVue from 'primevue/config';
+import "primevue/resources/themes/lara-light-indigo/theme.css";     
+import "primevue/resources/primevue.min.css";
 
 const app = createApp(App)
-
-app.use(BalmUI);
-app.use(BalmUIPlus);
+app.use(PrimeVue);
 app.mount('#app');
