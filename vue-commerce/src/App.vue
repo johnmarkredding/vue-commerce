@@ -1,3 +1,11 @@
+<template>
+  <!-- add shopping cart, currency switcher, search, and category drop down -->
+  <HeaderBar />
+  <!-- Hero -->
+  <!-- Product list -->
+  <!-- Filter -->
+</template>
+
 <script>
 import HeaderBar from './components/HeaderBar.vue';
 
@@ -9,12 +17,7 @@ export default {
   data() {
   },
 }
-
 </script>
-
-<template>
-  <HeaderBar />
-</template>
 
 <style>
 #app {
