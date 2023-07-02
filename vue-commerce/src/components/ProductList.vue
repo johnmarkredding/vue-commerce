@@ -49,4 +49,9 @@ const onSortChange = (event) => {
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.card {
+  display: grid;
+
+}
+</style>
