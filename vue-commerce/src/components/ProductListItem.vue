@@ -18,7 +18,8 @@ const cartStore = useCartStore();
       <template #footer>
         <Button @click="(e) => { cartStore.add(props.product) }" icon="pi pi-shopping-cart" label="Add" severity="danger"
           aria-label="Add to cart" rounded />
-        <Button icon="pi pi-search" label="More" text aria-label="See more" rounded />
+        <Button @click="() => { console.log(`Implement ProductView! Show more`); }" icon="pi pi-search" label="More" text
+          aria-label="See more" rounded />
       </template>
     </Card>
   </li>

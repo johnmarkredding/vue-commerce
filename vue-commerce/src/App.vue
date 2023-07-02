@@ -1,14 +1,17 @@
 <template>
-  <!-- add shopping cart, currency switcher, search, and category drop down -->
-  <!-- <HeaderBar /> -->
-  <!-- Hero -->
-  <!-- Product list -->
-  <!-- Filter -->
-  <ProductList :products="productsStore.products" />
+  <HomeView>
+    <!-- add shopping cart, currency switcher, search, and category drop down -->
+    <!-- <HeaderBar /> -->
+    <!-- Hero -->
+    <!-- Product list -->
+    <!-- Filter -->
+    <ProductList :products="productsStore.products" />
+  </HomeView>
 </template>
 
 <script setup>
 // import HeaderBar from './components/HeaderBar.vue';
+import HomeView from './views/HomeView.vue';
 import ProductList from './components/ProductList.vue';
 import { useProductsStore } from './store';
 

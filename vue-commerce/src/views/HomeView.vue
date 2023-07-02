@@ -1,21 +1,9 @@
 <template>
-  <!-- Photo -->
-  <!-- Title -->
-  <!-- Description -->
-  <!-- Price -->
-  <!-- Reviews -->
+  <slot></slot>
 </template>
 
-<script>
-export default {
-  name: 'HomeView',
-  data() {
-    return {
-    };
-  },
-  components: {
-  }
-}
+<script setup>
+
 </script>
 
 <style scoped></style>
