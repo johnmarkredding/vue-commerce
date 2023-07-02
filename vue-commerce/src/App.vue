@@ -15,7 +15,6 @@ import { useProductsStore } from './store';
 const productsStore = useProductsStore();
 
 productsStore.fetch();
-
 </script>
 
 <style>

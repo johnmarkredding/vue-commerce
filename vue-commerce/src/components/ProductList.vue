@@ -1,7 +1,3 @@
-<!-- <template>
-  <ProductListItem :key="product.id" v-for="product in props.products" :product="product" />
-</template> -->
-
 <template>
   <div class="card">
     <DataView :value="props.products" :sortOrder="sortOrder" :sortField="sortField">
@@ -52,6 +48,5 @@ const onSortChange = (event) => {
 <style scoped>
 .card {
   display: grid;
-
 }
 </style>

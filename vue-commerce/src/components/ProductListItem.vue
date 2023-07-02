@@ -2,8 +2,9 @@
 import Card from 'primevue/card';
 import Button from 'primevue/button';
 import { defineProps } from 'vue';
+import { useCartStore } from '../store';
 const props = defineProps(['product']);
-
+const cartStore = useCartStore();
 </script>
 
 <template>
@@ -14,14 +15,10 @@ const props = defineProps(['product']);
       </template>
       <template #title> {{ props.product.title }} </template>
       <template #subtitle> {{ props.product.category }} <p>${{ props.product.price }}</p></template>
-      <template #content>
-        <p>
-          {{ props.product.description }}
-        </p>
-      </template>
       <template #footer>
-        <Button icon="pi pi-shopping-cart" label="Add" severity="danger" rounded aria-label="Add to cart" />
-        <Button icon="pi pi-search" label="More" text rounded aria-label="See more" />
+        <Button @click="(e) => { cartStore.add(props.product) }" icon="pi pi-shopping-cart" label="Add" severity="danger"
+          aria-label="Add to cart" rounded />
+        <Button icon="pi pi-search" label="More" text aria-label="See more" rounded />
       </template>
     </Card>
   </li>

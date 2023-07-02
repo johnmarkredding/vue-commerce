@@ -26,8 +26,9 @@ export const useCartStore = defineStore('cart', {
     clear() {
       this.cart = [];
     },
-    add(item) {
-      this.cart = [...this.cart, item];
+    add(product) {
+      this.cart[product.id] ? (this.cart[product.id].quantity++) : this.cart[product.id] = {quantity: 1, product};
+      console.log(this.cart);
     },
     remove(itemId) {
       this.cart = this.cart.filter((i)=>i.id != itemId);
