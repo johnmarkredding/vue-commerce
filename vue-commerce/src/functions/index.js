@@ -1,5 +1,7 @@
-import cartTotal from "./cartTotal.js/index.js";
+import totalCart from "./totalCart";
 
-export default () => ({
-  cartTotal,
-});
+export {totalCart};
+
+export default () => {
+  totalCart
+};

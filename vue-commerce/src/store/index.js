@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { cartTotal } from '../functions';
+import { totalCart } from '../functions/index.js';
 
 export const useProductsStore = defineStore('products', {
   state: () => ({ products: [] }),
@@ -7,19 +7,34 @@ export const useProductsStore = defineStore('products', {
     update(products) {
       this.products = products;
     },
+    async fetch() {
+      try {
+        const response = await fetch('https://fakestoreapi.com/products');
+        const data = await response.json();
+        this.products = data;
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    },
   },
 });
+
+
 export const useCartStore = defineStore('cart', {
   state: () => ({ cart: []}),
   actions: {
-    update(items) {
-      this.cart = items;
+    clear() {
+      this.cart = [];
     },
     add(item) {
       this.cart = [...this.cart, item];
+    },
+    remove(itemId) {
+      this.cart = this.cart.filter((i)=>i.id != itemId);
     }
   },
   getters: {
-    getPrice: (state) => cartTotal(state.cart)
+    getTotal: (state) => totalCart(state.cart),
+    getCart: (state) => state.cart
   }
 });

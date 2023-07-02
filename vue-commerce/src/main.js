@@ -6,7 +6,7 @@ import "primevue/resources/themes/lara-light-indigo/theme.css";
 import "primevue/resources/primevue.min.css";
 
 const pinia = createPinia();
-const app = createApp(App).use(createPinia());
+const app = createApp(App);
 
 app.use(pinia);
 app.use(PrimeVue);
