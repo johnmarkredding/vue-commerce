@@ -35,11 +35,10 @@ export const useCartStore = defineStore('cart', {
       
       // If there's only 1 product (or unexpected '0' case), set item to null.
       if (this.cart[productId].quantity <= 1) {
-        this.cart[productId] = null;
+        delete this.cart[productId];
       } else {
         this.cart[productId].quantity--;
       }
-      console.log(this.cart)
     }
   },
   getters: {
