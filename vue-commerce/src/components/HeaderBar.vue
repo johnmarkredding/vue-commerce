@@ -31,10 +31,10 @@ const currencies = ref([
 header {
   width: 100%;
   grid-area: header;
-  grid-gap: 0.5rem;
   display: grid;
-  grid-template-areas: "search currency cart";
-  grid-template-columns: 25% 1fr 10%;
+  grid-template-areas: "search . currency cart";
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }

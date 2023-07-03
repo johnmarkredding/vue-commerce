@@ -3,14 +3,13 @@ import Card from 'primevue/card';
 import Button from 'primevue/button';
 import { defineProps } from 'vue';
 import { useCartStore } from '../store';
-// import { formatPrice } from '../functions';
 const props = defineProps(['product']);
 const cartStore = useCartStore();
 </script>
 
 <template>
-  <li :key="props.product.id">
-    <Card style="padding-top:1rem">
+  <li>
+    <Card>
       <template #header>
         <img alt="product header" :src="`${props.product.image}`" />
       </template>
@@ -29,10 +28,8 @@ const cartStore = useCartStore();
 <style scoped>
 li {
   list-style-type: none;
-  display: block;
-  margin: auto;
+  display: grid;
   max-width: 35rem;
-  margin-top: 1rem;
 }
 
 img {
