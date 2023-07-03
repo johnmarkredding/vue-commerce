@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { totalCart } from '../functions';
+import { totalCart, formatPrice } from '../functions';
 
 export const useProductsStore = defineStore('products', {
   state: () => ({ products: [] }),
@@ -42,6 +42,6 @@ export const useCartStore = defineStore('cart', {
     }
   },
   getters: {
-    getTotal: (state) => totalCart(state.cart)
+    getTotal: (state) => formatPrice(totalCart(state.cart))
   }
 });
