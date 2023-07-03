@@ -3,6 +3,7 @@ import Card from 'primevue/card';
 import Badge from 'primevue/badge';
 import Button from 'primevue/button';
 import { useCartStore } from '../store';
+import { formatPrice } from '../functions';
 import { defineProps } from 'vue';
 
 const cartStore = useCartStore();
@@ -16,7 +17,8 @@ const props = defineProps(['item']);
         <img alt="product header" :src="`${props.item.product.image}`" />
       </template>
       <template #title> {{ props.item.product.title }} </template>
-      <template #subtitle> {{ props.item.product.category }} <p>{{ props.item.product.price }}</p></template>
+      <template #subtitle> {{ props.item.product.category }} <p>${{ formatPrice(props.item.product.price) }}</p>
+      </template>
       <template #footer>
         <Button @click="(e) => { cartStore.add(props.item.product) }" icon="pi pi-plus" aria-label="Add to cart"
           rounded />

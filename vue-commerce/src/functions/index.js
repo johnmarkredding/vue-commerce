@@ -1,9 +1,8 @@
 'use strict';
-import totalCartHelper from "./totalCart";
+import totalItemsHelper from "./totalItems";
 import formatPriceHelper from "./formatPrice";
 
-// export totalCart;
 
-export const totalCart = totalCartHelper;
+export const totalItems = totalItemsHelper;
 export const formatPrice = formatPriceHelper;
-export default { totalCart, formatPrice };
+export default { totalItems, formatPrice };
