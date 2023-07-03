@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { totalItems, formatPrice, createProduct, fetchFakeApi } from '../functions';
+import { formatPrice, createProduct, fetchFakeApi } from '../functions';
 
 export const useProductsStore = defineStore('products', {
   state: () => ({ products: [] }),
@@ -39,8 +39,7 @@ export const useCartStore = defineStore('cart', {
     }
   },
   getters: {
-    getTotal: (state) => () => totalItems(Object.values(state.cart)),
-    getTotalString: (state) => () => formatPrice(state.cart.getTotal()),
+    getTotal: (state) => () => formatPrice(Object.values(state.cart).reduce((acc, i) => (acc + (i.quantity * i.product.price)), 0)),
     getCount: (state) => () => Object.values(state.cart).reduce((acc, i) => (acc + i.quantity), 0)
   }
 });
