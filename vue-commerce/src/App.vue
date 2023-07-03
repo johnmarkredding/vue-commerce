@@ -6,7 +6,7 @@
   <HomeView>
     <HeaderBar />
     <FilterSelector />
-    <ProductList :style="'grid-area:body'" :products="productsStore.getFilteredProducts()" />
+    <ProductList :style="'grid-area:body'" :products="productsStore.products" />
   </HomeView>
   <CartView />
 </template>
