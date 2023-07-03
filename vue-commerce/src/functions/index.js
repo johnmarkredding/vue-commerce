@@ -1,7 +1,6 @@
+'use strict';
 import totalCart from "./totalCart";
 
-export {totalCart};
-
-export default () => {
+export default {
   totalCart
 };
