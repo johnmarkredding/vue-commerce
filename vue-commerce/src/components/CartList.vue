@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <CartListItem :key="item.product.id" v-for="item in cartStore.cart" :item="item" />
+    <CartListItem :key="item.id" v-for="item in cartStore.cart" :item="item" />
   </div>
 </template>
 
