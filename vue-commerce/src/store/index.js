@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { totalItems, formatPrice, createProduct } from '../functions';
+import { totalItems, formatPrice, createProduct, fetchFakeApi } from '../functions';
 
 export const useProductsStore = defineStore('products', {
   state: () => ({ products: [] }),
@@ -7,14 +7,12 @@ export const useProductsStore = defineStore('products', {
     update(products) {
       this.products = products.map(p => createProduct(p));
     },
-    async fetch() {
-      try {
-        const response = await fetch('https://fakestoreapi.com/products');
-        const data = await response.json();
-        this.update(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    fetch() {
+      fetchFakeApi().then(async res => {
+        this.update(await res.json());
+      }).catch(err => {
+        console.error('Error fetching data:', err)
+      });
     },
   }
 });
