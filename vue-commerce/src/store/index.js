@@ -21,20 +21,20 @@ export const useProductsStore = defineStore('products', {
 
 
 export const useCartStore = defineStore('cart', {
-  state: () => ({ cart: []}),
+  state: () => ({ cart: {}}),
   actions: {
     clear() {
-      this.cart = [];
+      this.cart = {};
     },
     add(product) {
       // Exists in the cart?   If so, add another.                  If not, create an item
       this.cart[product.id] ? (this.cart[product.id].quantity++) : (this.cart[product.id] = {quantity: 1, product});
-      console.log(this.cart)
     },
     remove(productId) {
-      if (!this.cart[productId]) { // Skip situations where there is no product found in cart.
-        return;
-      } else if (this.cart[productId].quantity < 2) { // If there's only 1 product (or unexpected '0' case), set item to null.
+      if (!this.cart[productId]) { return; } // Skip situations where product is not in cart.
+      
+      // If there's only 1 product (or unexpected '0' case), set item to null.
+      if (this.cart[productId].quantity <= 1) {
         this.cart[productId] = null;
       } else {
         this.cart[productId].quantity--;
