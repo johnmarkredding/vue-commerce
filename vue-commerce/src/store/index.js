@@ -27,15 +27,22 @@ export const useCartStore = defineStore('cart', {
       this.cart = [];
     },
     add(product) {
-      // Does the product exist in the cart? Add another if so.    Create an item if not
+      // Exists in the cart?   If so, add another.                  If not, create an item
       this.cart[product.id] ? (this.cart[product.id].quantity++) : (this.cart[product.id] = {quantity: 1, product});
+      console.log(this.cart)
     },
-    remove(itemId) {
-      this.cart = this.cart.filter((i)=>i.id != itemId);
+    remove(productId) {
+      if (!this.cart[productId]) { // Skip situations where there is no product found in cart.
+        return;
+      } else if (this.cart[productId].quantity < 2) { // If there's only 1 product (or unexpected '0' case), set item to null.
+        this.cart[productId] = null;
+      } else {
+        this.cart[productId].quantity--;
+      }
+      console.log(this.cart)
     }
   },
   getters: {
-    getTotal: (state) => totalCart(state.cart),
-    getCart: (state) => state.cart
+    getTotal: (state) => totalCart(state.cart)
   }
 });
