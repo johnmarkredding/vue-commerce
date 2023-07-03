@@ -1,19 +1,21 @@
 <template>
   <!-- add shopping cart, currency switcher, search, and category drop down -->
-  <!-- <HeaderBar /> -->
   <!-- Hero -->
   <!-- Product list -->
   <!-- Filter -->
   <HomeView>
-    <ProductList :products="productsStore.products" />
+    <HeaderBar />
+    <FilterSelector />
+    <ProductList :style="'grid-area:body'" :products="productsStore.getFilteredProducts()" />
   </HomeView>
   <CartView />
 </template>
 
 <script setup>
-// import HeaderBar from './components/HeaderBar.vue';
+import HeaderBar from './components/HeaderBar.vue';
 import HomeView from './views/HomeView.vue';
 import ProductList from './components/ProductList.vue';
+import FilterSelector from './components/FilterSelector.vue';
 import CartView from './views/CartView.vue';
 import { useProductsStore } from './store';
 

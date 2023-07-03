@@ -1,9 +1,18 @@
 <template>
-  <slot></slot>
+  <section>
+    <slot></slot>
+  </section>
 </template>
 
 <script setup>
 
 </script>
 
-<style scoped></style>
+<style scoped>
+section {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "sidebar body body";
+}
+</style>

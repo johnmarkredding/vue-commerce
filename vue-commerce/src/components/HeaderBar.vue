@@ -1,3 +1,16 @@
+<template>
+  <header class="card relative z-2">
+    <Menubar :model="items">
+      <template #start>
+        <InputText placeholder="Search" type="text" />
+      </template>
+      <template #end>
+        <CurrencySelector :currencyOptions="currencies" />
+      </template>
+    </Menubar>
+  </header>
+</template>
+
 <script>
 import Menubar from 'primevue/menubar';
 import InputText from 'primevue/inputtext';
@@ -115,15 +128,8 @@ export default {
 };
 </script>
 
-<template>
-  <div class="card relative z-2">
-    <Menubar :model="items">
-      <template #start>
-        <InputText placeholder="Search" type="text" />
-      </template>
-      <template #end>
-        <CurrencySelector :currencyOptions="currencies" />
-      </template>
-    </Menubar>
-  </div>
-</template>
+<style scoped>
+header {
+  grid-area: header;
+}
+</style>

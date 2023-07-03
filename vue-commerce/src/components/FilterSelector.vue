@@ -1,17 +1,21 @@
 <template>
   <!-- Grid Setup with Slots for placing items within -->
+  <aside>
+    <p>Hey!</p>
+  </aside>
 </template>
 
-<script>
-export default {
-  name: 'FilterSelector',
-  data() {
-    return {
-    };
-  },
-  components: {
-  }
-}
+<script setup>
+
 </script>
 
-<style scoped></style>
+<style scoped>
+aside {
+  grid-area: sidebar;
+  background-color: blue;
+}
+
+p {
+  color: aquamarine
+}
+</style>

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { totalItems, formatPrice, createProduct, fetchFakeApi } from '../functions';
+import { totalItems, formatPrice, createProduct, fetchFakeApi, filterProducts } from '../functions';
 
 export const useProductsStore = defineStore('products', {
   state: () => ({ products: [] }),
@@ -14,6 +14,9 @@ export const useProductsStore = defineStore('products', {
         console.error('Error fetching data:', err)
       });
     },
+  },
+  getters: {
+    getFilteredProducts: (state) => () => state.products
   }
 });
 
