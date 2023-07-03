@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>${{ cartStore.getTotal }}</h2>
+    <h2>${{ formatPrice(cartStore.getTotal) }}</h2>
     <slot>
       <CartList />
     </slot>
@@ -9,6 +9,7 @@
 
 <script setup>
 import CartList from '../components/CartList.vue';
+import { formatPrice } from '../functions';
 import { useCartStore } from '../store';
 
 const cartStore = useCartStore();
