@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>{{ cartStore.getTotal }}</h2>
+    <h2>${{ cartStore.getTotal }}</h2>
     <slot>
       <CartList />
     </slot>
