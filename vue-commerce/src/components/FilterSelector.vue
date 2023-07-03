@@ -1,7 +1,15 @@
 <template>
   <!-- Grid Setup with Slots for placing items within -->
   <aside>
-    <p>Hey!</p>
+    <header>
+      <h3>Filter items</h3>
+    </header>
+    <div>
+      <p>Color picker</p>
+      <p>Category</p>
+      <p>Price range</p>
+      <p>Brand</p>
+    </div>
   </aside>
 </template>
 
@@ -12,10 +20,5 @@
 <style scoped>
 aside {
   grid-area: sidebar;
-  background-color: blue;
-}
-
-p {
-  color: aquamarine
 }
 </style>

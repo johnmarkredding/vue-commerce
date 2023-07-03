@@ -40,6 +40,7 @@ export const useCartStore = defineStore('cart', {
   },
   getters: {
     getTotal: (state) => () => totalItems(Object.values(state.cart)),
-    getTotalString: (state) => () => formatPrice(state.cart.getTotal())
+    getTotalString: (state) => () => formatPrice(state.cart.getTotal()),
+    getCount: (state) => () => Object.values(state.cart).reduce((acc, i) => (acc + i.quantity), 0)
   }
 });
