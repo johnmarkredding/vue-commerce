@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { totalCart } from '../functions/index.js';
+import { totalCart } from '../functions';
 
 export const useProductsStore = defineStore('products', {
   state: () => ({ products: [] }),

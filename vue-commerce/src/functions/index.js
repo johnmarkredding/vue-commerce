@@ -1,6 +1,7 @@
 'use strict';
-import totalCart from "./totalCart";
+import totalCartHelper from "./totalCart";
 
-export default {
-  totalCart
-};
+// export totalCart;
+
+export const totalCart = totalCartHelper;
+export default { totalCart };
