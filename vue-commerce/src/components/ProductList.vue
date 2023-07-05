@@ -12,6 +12,7 @@ const props = defineProps(['products']);
 
 <style scoped>
 #product-grid {
+  list-style-type: none;
   grid-area: body;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));

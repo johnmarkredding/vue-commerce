@@ -4,7 +4,7 @@ const cartStore = useCartStore();
 </script>
 
 <template>
-  <i v-badge.danger="`${cartStore.getCount()}`" class="pi pi-shopping-cart p-overlay-badge" />
+  <i v-badge.danger="`${cartStore.getCount()}`" class="pi pi-shopping-cart" />
   <p>${{ cartStore.getTotal() }}</p>
 </template>
 
