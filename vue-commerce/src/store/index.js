@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia';
-import { formatPrice, createProduct, fetchFakeApi } from '../functions';
+import { formatPrice, createProduct, fetchFakeApi } from '@/functions';
 
 export const useProductsStore = defineStore('products', {
   state: () => ({ products: [] }),

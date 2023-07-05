@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import ProductListItem from './ProductListItem.vue';
+import ProductListItem from '@/components/ProductListItem.vue';
 import { defineProps } from 'vue';
 const props = defineProps(['products']);
 </script>

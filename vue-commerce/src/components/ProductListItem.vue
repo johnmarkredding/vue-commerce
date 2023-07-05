@@ -2,7 +2,7 @@
 import Card from 'primevue/card';
 import Button from 'primevue/button';
 import { defineProps } from 'vue';
-import { useCartStore } from '../store';
+import { useCartStore } from '@/store';
 const props = defineProps(['product']);
 const cartStore = useCartStore();
 </script>

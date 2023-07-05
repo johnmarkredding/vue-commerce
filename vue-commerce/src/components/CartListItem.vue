@@ -2,8 +2,8 @@
 import Card from 'primevue/card';
 import Badge from 'primevue/badge';
 import Button from 'primevue/button';
-import { useCartStore } from '../store';
-import { formatPrice } from '../functions';
+import { useCartStore } from '@/store';
+import { formatPrice } from '@/functions';
 import { defineProps } from 'vue';
 
 const cartStore = useCartStore();

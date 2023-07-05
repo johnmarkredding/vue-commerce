@@ -5,8 +5,8 @@
 </template>
 
 <script setup>
-import CartListItem from './CartListItem.vue';
-import { useCartStore } from '../store';
+import CartListItem from '@/components/CartListItem.vue';
+import { useCartStore } from '@/store';
 
 const cartStore = useCartStore();
 </script>

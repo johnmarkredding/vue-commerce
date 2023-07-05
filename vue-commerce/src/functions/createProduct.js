@@ -1,4 +1,4 @@
-import formatPrice from "./formatPrice";
+import formatPrice from "@/functions/formatPrice";
 
 export default function createProduct (propertyObj) {
   const newProduct = {...propertyObj};

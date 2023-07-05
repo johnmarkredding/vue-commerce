@@ -7,9 +7,9 @@
 </template>
 
 <script setup>
-import ProductList from '../components/ProductList.vue';
-import FilterSelector from '../components/FilterSelector.vue';
-import { useProductsStore } from '../store';
+import ProductList from '@/components/ProductList.vue';
+import FilterSelector from '@/components/FilterSelector.vue';
+import { useProductsStore } from '@/store';
 
 const productsStore = useProductsStore();
 

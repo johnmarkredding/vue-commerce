@@ -8,9 +8,9 @@
 </template>
 
 <script setup>
-import CartList from '../components/CartList.vue';
-import { formatPrice } from '../functions';
-import { useCartStore } from '../store';
+import CartList from '@/components/CartList.vue';
+import { formatPrice } from '@/functions';
+import { useCartStore } from '@/store';
 
 const cartStore = useCartStore();
 </script>

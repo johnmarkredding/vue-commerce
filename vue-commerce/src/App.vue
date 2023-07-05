@@ -10,9 +10,9 @@
 </template>
 
 <script setup>
-import HeaderBar from './components/HeaderBar.vue';
-import HomeView from './views/HomeView.vue';
-import CartView from './views/CartView.vue';
+import HeaderBar from '@/components/HeaderBar.vue';
+import HomeView from '@/views/HomeView.vue';
+import CartView from '@/views/CartView.vue';
 </script>
 
 <style>

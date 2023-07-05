@@ -1,8 +1,8 @@
 'use strict';
-import formatPriceHelper from "./formatPrice";
-import createProductHelper from "./createProduct";
-import fetchFakeApiHelper from "./fetchFakeApi";
-import filterProductsHelper from "./filterProducts";
+import formatPriceHelper from "@/functions/formatPrice";
+import createProductHelper from "@/functions/createProduct";
+import fetchFakeApiHelper from "@/functions/fetchFakeApi";
+import filterProductsHelper from "@/functions/filterProducts";
 
 export const createProduct = createProductHelper;
 export const formatPrice = formatPriceHelper;
