@@ -14,8 +14,8 @@
 
 <script setup>
 import InputText from 'primevue/inputtext';
-import CurrencySelector from './CurrencySelector.vue'
-import CartStatus from './CartStatus.vue'
+import CurrencySelector from '@/components/CurrencySelector.vue'
+import CartStatus from '@/components/CartStatus.vue'
 import { ref } from 'vue'
 
 const currencies = ref([
