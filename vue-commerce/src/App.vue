@@ -24,4 +24,8 @@ import CartView from './views/CartView.vue';
   color: #2c3e50;
   background-color: #d4e5f6;
 }
+
+img {
+  user-select: none;
+}
 </style>
